@@ -4,9 +4,9 @@ IMAGENET_PRETRAIN=weight/R-101.pkl
 IMAGENET_PRETRAIN_TORCH=weight/resnet101-5d3b4d8f.pth  
 
 
-# python3 train_net.py --num-gpus 4 --config-file configs/coco/base.yaml     \
-#     --opts MODEL.WEIGHTS ${IMAGENET_PRETRAIN}                                         \
-#            OUTPUT_DIR ${SAVEDIR}/base
+python3 train_net.py --num-gpus 4 --config-file configs/coco/base.yaml     \
+    --opts MODEL.WEIGHTS ${IMAGENET_PRETRAIN}                                         \
+           OUTPUT_DIR ${SAVEDIR}/base
 
 
 python3 tools/model_surgery.py --dataset coco --method randinit                        \
