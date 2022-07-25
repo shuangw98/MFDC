@@ -52,6 +52,8 @@ def main():
         for i, lineinfo in enumerate(yaml_info):
             if '  TRAIN: ' in lineinfo:
                 _str_ = '  TRAIN: ("coco14_trainval_{}_{}shot_seed{}", )\n'
+                if 'remove' in lineinfo:
+                    _str_ = '  TRAIN: ("removecoco14_trainval_{}_{}shot_seed{}", )\n'
                 yaml_info[i] = _str_.format(suffix, args.shot, args.seed)
     else:
         raise NotImplementedError

@@ -548,7 +548,7 @@ class TwoSteamTrainer(Trainer):
         cfg_base = cfg.clone()
         cfg_base.defrost()
         if 'coco' in cfg_base.DATASETS.TRAIN[0]:
-            cfg_base.DATASETS.TRAIN = ('coco14_trainval_base',)
+            cfg_base.DATASETS.TRAIN = ('removecoco14_trainval_all',)
         else:
             split = cfg_base.DATASETS.TEST[0][-1]
             cfg_base.DATASETS.TRAIN = ('voc_2007_trainval_base{}'.format(split), 'voc_2012_trainval_base{}'.format(split))
