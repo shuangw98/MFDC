@@ -10,6 +10,8 @@ Pytorch == 1.6.0
 
 Torchvision == 0.7.0
 
+Detectron2 == 0.3
+
 CUDA == 10.1
 
 
@@ -44,6 +46,19 @@ sh voc_train.sh mfdc SPLIT_ID
 * For COCO
 ```
 sh coco_train.sh mfdc
+```
+
+## Citation
+If you find our code helpful in your research, please cite the following publication:
+```
+@inproceedings{wu2022multi,
+  title={Multi-faceted Distillation of Base-Novel Commonality for Few-Shot Object Detection},
+  author={Wu, Shuang and Pei, Wenjie and Mei, Dianwen and Chen, Fanglin and Tian, Jiandong and Lu, Guangming},
+  booktitle={European Conference on Computer Vision},
+  pages={578--594},
+  year={2022},
+  organization={Springer}
+}
 ```
 
 ## Contact
