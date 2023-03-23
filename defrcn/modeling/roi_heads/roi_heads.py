@@ -695,8 +695,8 @@ class CommonalityROIHeads(ROIHeads):
                 c_std = self.queue_s[c][:self.queue_ptr[c]].var(dim=0, unbiased=False)
                 if self.queue_ptr[c] > 1:
                     c_std = c_std * self.queue_ptr[c] / (self.queue_ptr[c] - 1)
-        base_mean.append(c_mean)
-        base_std.append(c_std)
+            base_mean.append(c_mean)
+            base_std.append(c_std)
         base_mean = torch.stack(base_mean, dim=0)
         base_std = torch.stack(base_std, dim=0)
         ####
